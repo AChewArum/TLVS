@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{68b8fb9d-84e6-4e39-887f-97ecc9e3a858}</ProjectGuid>
+    <RootNamespace>TLSoundLib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)inc;$(ProjectDir)include;$(ProjectDir)src;$(SolutionDir)TL_Common\inc;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
+    <OutDir>$(SolutionDir)_build\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)_build\_int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+    <LibraryPath>$(ProjectDir)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)inc;$(ProjectDir)include;$(ProjectDir)src;$(SolutionDir)TL_Common\inc;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
+    <OutDir>$(SolutionDir)_build\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)_build\_int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+    <LibraryPath>$(ProjectDir)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)inc;$(ProjectDir)include;$(ProjectDir)src;$(SolutionDir)TL_Common\inc;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
+    <OutDir>$(SolutionDir)_build\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)_build\_int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+    <LibraryPath>$(ProjectDir)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)inc;$(ProjectDir)include;$(ProjectDir)src;$(SolutionDir)TL_Common\inc;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
+    <OutDir>$(SolutionDir)_build\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)_build\_int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+    <LibraryPath>$(ProjectDir)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOUND_EXPORTING;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>SoundLib\SoundPCH.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>FMOD\$(PlatformTarget)\fmod_vc.lib;FMOD\$(PlatformTarget)\fmodL_vc.lib;FMOD\$(PlatformTarget)\fmodstudio_vc.lib;FMOD\$(PlatformTarget)\fmodstudioL_vc.lib;FMOD\$(PlatformTarget)\fsbank_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Test\*"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOUND_EXPORTING;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>SoundLib\SoundPCH.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>FMOD\$(PlatformTarget)\fmod_vc.lib;FMOD\$(PlatformTarget)\fmodL_vc.lib;FMOD\$(PlatformTarget)\fmodstudio_vc.lib;FMOD\$(PlatformTarget)\fmodstudioL_vc.lib;FMOD\$(PlatformTarget)\fsbank_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Test\*"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOUND_EXPORTING;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>SoundLib\SoundPCH.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>FMOD\$(PlatformTarget)\fmod_vc.lib;FMOD\$(PlatformTarget)\fmodL_vc.lib;FMOD\$(PlatformTarget)\fmodstudio_vc.lib;FMOD\$(PlatformTarget)\fmodstudioL_vc.lib;FMOD\$(PlatformTarget)\fsbank_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Test\*"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOUND_EXPORTING;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>SoundLib\SoundPCH.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>FMOD\$(PlatformTarget)\fmod_vc.lib;FMOD\$(PlatformTarget)\fmodL_vc.lib;FMOD\$(PlatformTarget)\fmodstudio_vc.lib;FMOD\$(PlatformTarget)\fmodstudioL_vc.lib;FMOD\$(PlatformTarget)\fsbank_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(ProjectDir)lib\FMOD\$(Platform)\*.dll" "$(OutputPath)..\_Test\*"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\SoundLib\Metal\ReverbZones.h" />
+    <ClInclude Include="inc\SoundLib\SoundSource.h" />
+    <ClInclude Include="inc\SoundLib\ISoundSystem.h" />
+    <ClInclude Include="inc\SoundLib\SoundInfo.h" />
+    <ClInclude Include="src\SoundLib\FMODAPI.h" />
+    <ClInclude Include="src\SoundLib\framework.h" />
+    <ClInclude Include="inc\SoundLib\Metal\Effect.h" />
+    <ClInclude Include="src\SoundLib\SoundHelper.h" />
+    <ClInclude Include="src\SoundLib\SoundPCH.h" />
+    <ClInclude Include="src\SoundLib\SoundSystem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\SoundLib\SoundListener.h" />
+    <ClCompile Include="src\SoundLib\ISoundSystem.cpp" />
+    <ClCompile Include="src\SoundLib\Metal\Channel.cpp" />
+    <ClCompile Include="src\SoundLib\Metal\Effect.cpp" />
+    <ClCompile Include="src\SoundLib\Metal\ReverbZones.cpp" />
+    <ClCompile Include="src\SoundLib\Metal\Sound.cpp" />
+    <ClInclude Include="inc\SoundLib\Metal\Sound.h" />
+    <ClCompile Include="src\SoundLib\SoundHelper.cpp" />
+    <ClCompile Include="src\SoundLib\SoundListener.cpp" />
+    <ClCompile Include="src\SoundLib\SoundPCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\SoundLib\SoundSource.cpp" />
+    <ClCompile Include="src\SoundLib\SoundSystem.cpp" />
+    <ClCompile Include="src\SoundLib\TL_SoundLib.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+    <ClInclude Include="inc\SoundLib\Metal\Channel.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

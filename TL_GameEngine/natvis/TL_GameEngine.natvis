@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+	<Type Name="TL_GameEngine::ComponentBase">
+		<DisplayString Condition="this->m_bEnable == false">
+			{{ [DISABLED] {this->m_Name}, gameObject: {this->m_GameObject->m_Name} }}
+		</DisplayString>
+		<DisplayString>
+			{{ {this->m_Name}, gameObject: {this->m_GameObject->m_Name} }}
+		</DisplayString>
+	</Type>
+
+	<Type Name="TL_GameEngine::GameObject">
+		<DisplayString Condition="this->m_Parent == nullptr">
+			{{ {this->m_Name}, parent: nullptr, childs: {this->m_Childs.size()}, components: {this->m_Components.size()} }}
+		</DisplayString>
+		<DisplayString>
+			{{ {this->m_Name}, parent: {this->m_Parent->m_Name}({this->m_Parent->m_UUID}), childs: {this->m_Childs.size()}, components: {this->m_Components.size()} }}
+		</DisplayString>
+	</Type>
+</AutoVisualizer>

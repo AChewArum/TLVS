@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일\Example">
+      <UniqueIdentifier>{a06a7b58-ee94-4300-b2e0-76f6ffb065bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Example\Ex_Triangle">
+      <UniqueIdentifier>{50d2ab15-2a2e-4856-a48a-0c84fee347be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Example\Ex_BoxCamera">
+      <UniqueIdentifier>{1d82ad73-2b3e-4fba-bb37-5ae40a1f42b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Example\Ex_TriangleColor">
+      <UniqueIdentifier>{bde0d243-37b7-45a8-ba7a-320c30479abb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Example\Ex_Light">
+      <UniqueIdentifier>{7b0548d7-4571-4574-85bd-eb7e08e5d1e9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\framework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Client.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Example\IExample.h">
+      <Filter>헤더 파일\Example</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Example\00_Ex_Triagle\Ex_Triangle.h">
+      <Filter>헤더 파일\Example\Ex_Triangle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Helper\Transform.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Example\02_Ex_BoxCamera\Ex_BoxCamera.h">
+      <Filter>헤더 파일\Example\Ex_BoxCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Example\01_Ex_TriangleColor\Ex_TriangleColor.h">
+      <Filter>헤더 파일\Example\Ex_TriangleColor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Example\03_Ex_Texture\Ex_Texture.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Example\04_Ex_TextureBuffer\Ex_TextureBuffer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Example\05_Ex_StateChange\Ex_StateChange.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\Box.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Example\06_EX_RTT\EX_RTT.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Example\07_EX_PBR\EX_PBR.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Example\08_Ex_Light\Ex_Light.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\TL_Box.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Example\09_Ex_Hyobin\Ex_Hyobin.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Example\10_Ex_Deferred\Ex_Deferred.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Example\11_Ex_PostProsessing\Ex_PostProsessing.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Example\12_Ex_IBL\Ex_IBL.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Client.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Example\00_Ex_Triagle\Ex_Triangle.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Example\01_Ex_TriangleColor\Ex_TriangleColor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Example\02_Ex_BoxCamera\Ex_BoxCamera.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Helper\Transform.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Example\03_Ex_Texture\Ex_Texture.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Example\04_Ex_TextureBuffer\Ex_TextureBuffer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Example\05_Ex_StateChange\Ex_StateChange.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\Box.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Example\06_EX_RTT\EX_RTT.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Example\07_EX_PBR\EX_PBR.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Example\08_Ex_Light\Ex_Light.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\TL_Box.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Example\09_Ex_Hyobin\Ex_Hyobin.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Example\10_Ex_Deferred\Ex_Deferred.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Example\11_Ex_PostProsessing\Ex_PostProsessing.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Example\12_Ex_IBL\Ex_IBL.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\Client.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="src\Client.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="src\Example\07_EX_PBR\PBR_PS.hlsl" />
+    <FxCompile Include="src\Example\07_EX_PBR\PBR_VS.hlsl" />
+    <FxCompile Include="src\Example\07_EX_PBR\PBRCanvasPS.hlsl" />
+    <FxCompile Include="src\Example\07_EX_PBR\PBRCanvasVS.hlsl" />
+    <FxCompile Include="src\Example\08_Ex_Light\LightPS.hlsl" />
+    <FxCompile Include="src\Example\08_Ex_Light\LightVS.hlsl" />
+    <FxCompile Include="src\Example\06_EX_RTT\BoxPS.hlsl" />
+    <FxCompile Include="src\Example\06_EX_RTT\BoxVS.hlsl" />
+    <FxCompile Include="src\Example\06_EX_RTT\CanvasPS.hlsl" />
+    <FxCompile Include="src\Example\06_EX_RTT\CanvasVS.hlsl" />
+    <FxCompile Include="src\Example\02_Ex_BoxCamera\BoxCameraPS.hlsl" />
+    <FxCompile Include="src\Example\02_Ex_BoxCamera\BoxCameraVS.hlsl" />
+  </ItemGroup>
+</Project>

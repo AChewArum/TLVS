@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{6fd50ae7-4716-4dca-9f6d-ce87915fdf4b}</ProjectGuid>
+    <RootNamespace>TLApplication</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)_build\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)_build\_int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+    <IncludePath>$(ProjectDir)inc;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)_build\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)_build\_int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+    <IncludePath>$(ProjectDir)inc;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)_build\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)_build\_int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+    <IncludePath>$(ProjectDir)inc;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)_build\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)_build\_int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+    <IncludePath>$(ProjectDir)inc;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>APPLICATION_BUILD_DLL;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)TL_Common\inc;$(SolutionDir)TL_Log\inc;$(SolutionDir)spdlog\inc;$(SolutionDir)TL_Graphics\inc;$(SolutionDir)TL_Physics\inc;$(SolutionDir)TL_SoundLib\inc;$(SolutionDir)TL_UI\inc;$(SolutionDir)TL_Window\inc;$(SolutionDir)ImGui\inc;$(SolutionDir)dependencies\cxxopts-3.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Test\*"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>APPLICATION_BUILD_DLL;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)TL_Common\inc;$(SolutionDir)TL_Log\inc;$(SolutionDir)spdlog\inc;$(SolutionDir)TL_Graphics\inc;$(SolutionDir)TL_Physics\inc;$(SolutionDir)TL_SoundLib\inc;$(SolutionDir)TL_UI\inc;$(SolutionDir)TL_Window\inc;$(SolutionDir)ImGui\inc;$(SolutionDir)dependencies\cxxopts-3.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Test\*"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>APPLICATION_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)TL_Common\inc;$(SolutionDir)TL_Log\inc;$(SolutionDir)spdlog\inc;$(SolutionDir)TL_Graphics\inc;$(SolutionDir)TL_Physics\inc;$(SolutionDir)TL_SoundLib\inc;$(SolutionDir)TL_UI\inc;$(SolutionDir)TL_Window\inc;$(SolutionDir)ImGui\inc;$(SolutionDir)dependencies\cxxopts-3.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Test\*"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>APPLICATION_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)TL_Common\inc;$(SolutionDir)TL_Log\inc;$(SolutionDir)spdlog\inc;$(SolutionDir)TL_Graphics\inc;$(SolutionDir)TL_Physics\inc;$(SolutionDir)TL_SoundLib\inc;$(SolutionDir)TL_UI\inc;$(SolutionDir)TL_Window\inc;$(SolutionDir)ImGui\inc;$(SolutionDir)dependencies\cxxopts-3.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Test\*"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\Application\ApplicationContext.h" />
+    <ClInclude Include="inc\Application\GameTime.h" />
+    <ClInclude Include="inc\Application\Input.h" />
+    <ClInclude Include="inc\Application\internal\dll.h" />
+    <ClInclude Include="inc\Application\Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="inc\Application\ApplicationContext.cpp" />
+    <ClCompile Include="inc\Application\GameTime.cpp" />
+    <ClCompile Include="inc\Application\Input.cpp" />
+    <ClCompile Include="inc\Application\Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ImGui\ImGui.vcxproj">
+      <Project>{fd75909f-fcc6-4db5-aeb3-dd4949ed3a04}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TL_Common\TL_Common.vcxproj">
+      <Project>{1e2dd089-556a-4bc5-9e4b-4676be45604f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TL_Graphics\TL_Graphics.vcxproj">
+      <Project>{045f76b3-d186-4e4a-acee-5cbdb4617de3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TL_Log\TL_Log.vcxproj">
+      <Project>{95a95720-07cd-40d7-bb4a-b26fe865d5be}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

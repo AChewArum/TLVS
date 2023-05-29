@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b9a5e45b-2b0d-4613-9eb6-61be39f628cf}</ProjectGuid>
+    <RootNamespace>TLGameEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\jw_Property\jw_Property.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\jw_Property\jw_Property.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\jw_Property\jw_Property.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\jw_Property\jw_Property.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)inc;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)inc;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)inc;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)inc;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GAME_ENGINE_BUILD_DLL;RTTR_DLL;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)TL_Common\inc;$(SolutionDir)TL_Application\inc;$(SolutionDir)TL_FBXLibrary\inc;$(SolutionDir)TL_Graphics\inc;$(SolutionDir)TL_Physics\inc;$(SolutionDir)TL_SoundLib\inc;$(SolutionDir)TL_Log\inc;$(SolutionDir)TL_UI\inc;$(SolutionDir)TL_Window\inc;$(ProjectDir)dependencies\stduuid\include;$(SolutionDir)spdlog\inc;$(SolutionDir)ImGui\inc;$(SolutionDir)dependencies\rttr-inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>GameEngine_pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)dependencies\lib\$(Configuration)-$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>rttr_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Test\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Test\*"</Command>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>xcopy /E /S /Y /R "$(OutputPath)..\TL_Graphics\*.dll" "$(OutputPath)*"</Command>
+    </PreLinkEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GAME_ENGINE_BUILD_DLL;RTTR_DLL;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)TL_Common\inc;$(SolutionDir)TL_Application\inc;$(SolutionDir)TL_FBXLibrary\inc;$(SolutionDir)TL_Graphics\inc;$(SolutionDir)TL_Physics\inc;$(SolutionDir)TL_SoundLib\inc;$(SolutionDir)TL_Log\inc;$(SolutionDir)TL_UI\inc;$(SolutionDir)TL_Window\inc;$(ProjectDir)dependencies\stduuid\include;$(SolutionDir)spdlog\inc;$(SolutionDir)ImGui\inc;$(SolutionDir)dependencies\rttr-inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>GameEngine_pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)dependencies\lib\$(Configuration)-$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>rttr_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Test\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Test\*"</Command>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>xcopy /E /S /Y /R "$(OutputPath)..\TL_Graphics\*.dll" "$(OutputPath)*"</Command>
+    </PreLinkEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GAME_ENGINE_BUILD_DLL;RTTR_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)TL_Common\inc;$(SolutionDir)TL_Application\inc;$(SolutionDir)TL_FBXLibrary\inc;$(SolutionDir)TL_Graphics\inc;$(SolutionDir)TL_Physics\inc;$(SolutionDir)TL_SoundLib\inc;$(SolutionDir)TL_Log\inc;$(SolutionDir)TL_UI\inc;$(SolutionDir)TL_Window\inc;$(ProjectDir)dependencies\stduuid\include;$(SolutionDir)spdlog\inc;$(SolutionDir)ImGui\inc;$(SolutionDir)dependencies\rttr-inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>GameEngine_pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)dependencies\lib\$(Configuration)-$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>rttr_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Test\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Test\*"</Command>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>xcopy /E /S /Y /R "$(OutputPath)..\TL_Graphics\*.dll" "$(OutputPath)*"</Command>
+    </PreLinkEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GAME_ENGINE_BUILD_DLL;RTTR_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)TL_Common\inc;$(SolutionDir)TL_Application\inc;$(SolutionDir)TL_FBXLibrary\inc;$(SolutionDir)TL_Graphics\inc;$(SolutionDir)TL_Physics\inc;$(SolutionDir)TL_SoundLib\inc;$(SolutionDir)TL_Log\inc;$(SolutionDir)TL_UI\inc;$(SolutionDir)TL_Window\inc;$(ProjectDir)dependencies\stduuid\include;$(SolutionDir)spdlog\inc;$(SolutionDir)ImGui\inc;$(SolutionDir)dependencies\rttr-inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>GameEngine_pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)dependencies\lib\$(Configuration)-$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>rttr_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(OutDir)*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(OutDir)*.pdb" "$(OutputPath)..\_Test\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Game\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Game\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Editor\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Editor\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Sample\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Sample\*"
+
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.dll" "$(OutputPath)..\_Test\*"
+xcopy /E /S /Y /R "$(SolutionDir)dependencies\dll\$(Configuration)-$(Platform)\*.pdb" "$(OutputPath)..\_Test\*"</Command>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>xcopy /E /S /Y /R "$(OutputPath)..\TL_Graphics\*.dll" "$(OutputPath)*"</Command>
+    </PreLinkEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\GameEngine\GameApplication.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\Animation.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\Animator.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\AudioListener.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\AudioReverbZones.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\AudioSource.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\BoxCollider.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\Camera.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\CameraArm.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\CapsuleCollider.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\Collider.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\Light\DirectionalLight.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\FreeLookCamera.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\IPhysicsEventComponent.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\MeshCollider.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\Light\PointLight.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\RigidBody.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\SkeletalMeshRenderer.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\SphereCollider.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\Light\SpotLight.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\StaticMeshRenderer.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Debug.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\GameObjectHelper.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\GameWorld.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\LayerMask.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Struct\AddressConvertMap.h" />
+    <ClInclude Include="inc\GameEngine\Interface\ISerializable.h" />
+    <ClInclude Include="inc\GameEngine\Resource\AnimationClip.h" />
+    <ClInclude Include="inc\GameEngine\Resource\AnimatorController.h" />
+    <ClInclude Include="inc\GameEngine\Resource\FBXObject.h" />
+    <ClInclude Include="inc\GameEngine\Resource\GameObjectPrefab.h" />
+    <ClInclude Include="inc\GameEngine\Resource\Material.h" />
+    <ClInclude Include="inc\GameEngine\Resource\Mesh.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Physics\Collision.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Physics\ContactPoint.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Physics\PhysicsSystem.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Physics\RaycastHit.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Sound\AudioClip.h" />
+    <ClInclude Include="inc\GameEngine\Internal\dll.h" />
+    <ClInclude Include="inc\GameEngine\Resource\Texture.h" />
+    <ClInclude Include="inc\GameEngine\Util\UELevelImporter.h" />
+    <ClInclude Include="inc\GameEngine\Util\UELevelParser.h" />
+    <ClInclude Include="src\GameEngine_pch.h" />
+    <ClInclude Include="src\GameEngine\internal\UUIDGenerator.h" />
+    <ClInclude Include="inc\GameEngine\Object.h" />
+    <ClInclude Include="inc\GameEngine\Resource\Resource.h" />
+    <ClInclude Include="inc\GameEngine\Resource\Resources.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\ComponentBase.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Component\Transform.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\GameObject.h" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Scene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="inc\GameEngine\GameFramework\Debug.cpp" />
+    <ClCompile Include="inc\GameEngine\GameFramework\GameObjectHelper.cpp" />
+    <ClCompile Include="inc\GameEngine\Resource\Material.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\Animator.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\Light\PointLight.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\Light\SpotLight.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\Animation.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\CameraArm.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\Light\DirectionalLight.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\Camera.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\SkeletalMeshRenderer.cpp" />
+    <ClCompile Include="inc\GameEngine\Util\UELevelImporter.cpp" />
+    <ClCompile Include="src\GameEngine\Resource\AnimationClip.cpp" />
+    <ClCompile Include="src\GameEngine\Resource\GameObjectPrefab.cpp" />
+    <ClCompile Include="src\GameEngine\Resource\Mesh.cpp" />
+    <ClCompile Include="src\GameEngine_pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Object.cpp" />
+    <ClCompile Include="src\GameEngine\Resource\Resources.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\AudioReverbZones.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\FreeLookCamera.cpp" />
+    <ClCompile Include="inc\GameEngine\GameFramework\LayerMask.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\GameFramework\Sound\AudioClip.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Sound\AudioSystem.cpp" />
+    <ClInclude Include="inc\GameEngine\GameFramework\Sound\AudioSystem.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClCompile Include="src\GameEngine\GameFramework\Component\AudioListener.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\GameFramework\Component\AudioSource.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\GameFramework\LayerMask.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\StaticMeshRenderer.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\BoxCollider.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\CapsuleCollider.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\Collider.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\IPhysicsEventComponent.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\MeshCollider.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\RigidBody.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\SphereCollider.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\GameWorld.cpp" />
+    <ClCompile Include="src\GameEngine\GameApplication.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\ComponentBase.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Component\Transform.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\GameObject.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Physics\Collision.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Physics\PhysicsSystem.cpp" />
+    <ClCompile Include="src\GameEngine\GameFramework\Scene.cpp" />
+    <ClCompile Include="src\GameEngine\internal\UUIDGenerator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ImGui\ImGui.vcxproj">
+      <Project>{fd75909f-fcc6-4db5-aeb3-dd4949ed3a04}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TL_Application\TL_Application.vcxproj">
+      <Project>{6fd50ae7-4716-4dca-9f6d-ce87915fdf4b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TL_Common\TL_Common.vcxproj">
+      <Project>{1e2dd089-556a-4bc5-9e4b-4676be45604f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TL_FBXLibrary\TL_FBXLibrary.vcxproj">
+      <Project>{491a7049-49e1-4821-8c31-9bf6a863f18e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TL_Graphics\TL_Graphics.vcxproj">
+      <Project>{045f76b3-d186-4e4a-acee-5cbdb4617de3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TL_Log\TL_Log.vcxproj">
+      <Project>{95a95720-07cd-40d7-bb4a-b26fe865d5be}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TL_Physics\TL_Physics.vcxproj">
+      <Project>{55204282-e49c-4fe0-8055-2491905c498f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TL_SoundLib\TL_SoundLib.vcxproj">
+      <Project>{68b8fb9d-84e6-4e39-887f-97ecc9e3a858}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TL_UI\TL_UI.vcxproj">
+      <Project>{baec281c-06ab-47a1-b7a0-a48fdca527a1}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="natvis\TL_GameEngine.natvis" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
